@@ -4,7 +4,6 @@ const router = express.Router();
 const {
   createWorkout,
   getWorkouts,
-  getWorkout,
   deleteWorkout,
   updateWorkout,
 } = require("../Controller/workoutControllers");
@@ -18,7 +17,7 @@ router.use(requireAuth)
 router.get("/", getWorkouts);
 
 // GET a single workout
-router.get("/:id", getWorkout);
+// router.get("/:id", getWorkout);
 
 // POST a new workout
 router.post("/", createWorkout); // post req to send data to server
